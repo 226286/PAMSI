@@ -4,15 +4,18 @@
 
 class stos
 {
-    int element;
-    element *wskaznik;
+    int *Tab;
+    int MaxSize;
+    int Size;
+
     public:
         stos();
         virtual ~stos();
-        void push(int element)      //dodaje element na wierzch stosu
+        void push(int element);     //dodaje element na wierzch stosu
         void pop();                 //zdejmuje element ze stosu
-        int size();                 //zwraca aktualny rozmiar stosu
-        int* find(int element);     //znajduje element na stosie
+        int rozmiar();              //zwraca aktualny rozmiar stosu
+        bool Find(int element);     //znajduje element na stosie
+        void wyswietl();            //wyswietla zawartosc stosu
         int top();                  //wraca wartosc elementu znajdujacego sie na wierzchu stosu
     protected:
     private:

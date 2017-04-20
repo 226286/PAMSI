@@ -4,16 +4,19 @@
 
 class kolejka
 {
-    int element;
-    element *wskaznik;
+    int *Tab;
+    int MaxSize;
+    int Size;
     public:
         kolejka();
         virtual ~kolejka();
-        void push(int element)      //dodaje element na koniec kolejki
+        void push(int element);      //dodaje element na koniec kolejki
         void pop();                 //pobiera pierwszy element kolejki
-        int size();                 //zwraca rozmiar kolejki
-        int* find(int element);     //znajduje element
-        int end();                  //zwraca wartosc pierwszego elementu kolejki
+        void wyswietl();
+        int rozmiar();                 //zwraca rozmiar kolejki
+        bool Find(int element);      //sprawdza czy element o danej wartosci istnieje w kolejce
+        int Back();                 //zwraca wartosc ostatniego elementu kolejki
+        int Front();                //zwraca wartosc pierwszego elementu kolejki
     protected:
     private:
 };

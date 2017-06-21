@@ -39,6 +39,7 @@ class tabasc
         virtual ~tabasc();
         node *find (const char *k) const;
         void insert (const char *k, int value);
+        tabasc & operator= (const tabasc & l);
     protected:
 };
 
